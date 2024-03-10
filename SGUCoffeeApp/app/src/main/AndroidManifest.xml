@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon_app"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SGUCoffeeApp"
+        android:fontFamily="@font/be_vietnam"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.sgu.coffee.Activity.LoginActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.MainActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.SignUpActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.ShowDetailActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.UserActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.ProductsActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.CartActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.ForgotPasswordActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.EditProfileActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.OrderActivity" android:exported="true"></activity>
+        <activity android:name="com.sgu.coffee.Activity.AdminActivity" android:exported="true"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3635319613216791~9254690795"/>
+
+        <activity
+            android:name="com.sgu.coffee.Activity.CheckOutActivity"
+            android:launchMode="singleTask"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="demozpdk"
+                    android:host="app" />
+            </intent-filter>
+
+        </activity>
+        <activity android:name="com.sgu.coffee.Activity.AddressActivity"></activity>
+        <activity android:name="com.sgu.coffee.OpenAI.ChatGPTActivity"></activity>
+
+
+        <activity
+            android:name="com.sgu.coffee.Activity.IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
